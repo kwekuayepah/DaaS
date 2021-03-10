@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaaS.DataLayer", "DaaS.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaaS.Core", "DaaS.Core\DaaS.Core.csproj", "{8AB30155-59FF-4D03-9F54-65AC6DD8E5BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaaS.Logic", "DaaS.Logic\DaaS.Logic.csproj", "{02B0B6A1-7C95-47C1-989B-4744A1DC7DAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{8AB30155-59FF-4D03-9F54-65AC6DD8E5BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AB30155-59FF-4D03-9F54-65AC6DD8E5BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AB30155-59FF-4D03-9F54-65AC6DD8E5BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02B0B6A1-7C95-47C1-989B-4744A1DC7DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B0B6A1-7C95-47C1-989B-4744A1DC7DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B0B6A1-7C95-47C1-989B-4744A1DC7DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B0B6A1-7C95-47C1-989B-4744A1DC7DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

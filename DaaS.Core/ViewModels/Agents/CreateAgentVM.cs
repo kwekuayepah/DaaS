@@ -1,6 +1,6 @@
-namespace DaaS.DataLayer.DataModels
+namespace DaaS.Core.ViewModels.Agents
 {
-    public class Agent:BaseEntity
+    public class CreateAgentVM
     {
         public string Fullname { get; set; }
         public string ImageUrl { get; set; }
@@ -13,6 +13,5 @@ namespace DaaS.DataLayer.DataModels
         public string AccountCode { get; set; }
         public string Longitude { get; set; }
         public string Latitude { get; set; }
-        
     }
 }
