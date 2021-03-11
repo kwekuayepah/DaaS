@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using DaaS.Core.ErrorHandler;
 using DaaS.Core.ViewModels.Agents;
 using DaaS.DataLayer.DataModels;
 using DaaS.DataLayer.Repository.Base;
@@ -16,9 +17,9 @@ namespace DaaS.DataLayer.Repository.AgentRepo
             _logger = logger;
         }
 
-        public async Task<bool> CreateAgentInDb(CreateAgentVM model)
+        public async Task<string> CreateAgentInDb(CreateAgentVM model)
         {
-            var result = false;
+            var result = string.Empty;
             try
             {
                 var agent = new Agent
@@ -40,13 +41,13 @@ namespace DaaS.DataLayer.Repository.AgentRepo
                 };
 
                 await context.Agents.AddAsync(agent);
-                result = true;
-                _logger.LogInformation("Added Agents Successfully");
+                result = agent.Id;
+                _logger.LogInformation("Create agent successful with Id: {agent_id}", result);
             }
             catch (Exception e)
             {
                 _logger.LogError(e, e.ToString());
-                result = false;
+                result = ErrorHandler.AgentCreateError;
             }
 
             return result;

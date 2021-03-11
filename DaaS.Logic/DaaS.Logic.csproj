@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DaaS.Core\DaaS.Core.csproj" />
+      <ProjectReference Include="..\DaaS.DataLayer\DaaS.DataLayer.csproj" />
     </ItemGroup>
 
 </Project>

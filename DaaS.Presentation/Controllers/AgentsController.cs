@@ -1,5 +1,7 @@
 using System;
 using System.Threading.Tasks;
+using DaaS.Core.Extensions;
+using DaaS.Core.ResponseWrapper;
 using DaaS.Core.ViewModels.Agents;
 using DaaS.Logic.AgentService.Provider;
 using Microsoft.AspNetCore.Mvc;
@@ -22,15 +24,10 @@ namespace DaaS.Presentation.Controllers
         [HttpPost("createagent")]
         public async Task<IActionResult> CreateAgent([FromBody] CreateAgentVM request)
         {
-            try
-            {
-                var result = await _agentService.CreateAgent(request);
-                return result.ToIActionResult();
-            }
-            catch (Exception e)
-            {
-                return BadRequest();
-            }
+            if (!ModelState.IsValid) return AppResult.Fail(ModelState.GetErrorMessageAsString("\n")).ToIActionResult();
+
+            var result = await _agentService.CreateAgent(request);
+            return result.ToIActionResult();
         }
     }
 }
