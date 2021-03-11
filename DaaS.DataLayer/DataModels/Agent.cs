@@ -6,6 +6,7 @@ namespace DaaS.DataLayer.DataModels
         public string ImageUrl { get; set; }
         public string MotorNumber { get; set; }
         public string MobileNumber { get; set; }
+        public string CountryCode { get; set; }
         public string AccountType { get; set; }
         public string AccountNumber { get; set; }
         public string AccountName { get; set; }
