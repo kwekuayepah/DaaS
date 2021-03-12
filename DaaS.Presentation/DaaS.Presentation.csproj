@@ -4,5 +4,10 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\DaaS.Core\DaaS.Core.csproj" />
+      <ProjectReference Include="..\DaaS.Logic\DaaS.Logic.csproj" />
+    </ItemGroup>
+
 
 </Project>
