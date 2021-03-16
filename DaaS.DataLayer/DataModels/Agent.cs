@@ -14,6 +14,7 @@ namespace DaaS.DataLayer.DataModels
         public string AccountCode { get; set; }
         public string Longitude { get; set; }
         public string Latitude { get; set; }
+        public string Status { get; set; }
         
     }
 }

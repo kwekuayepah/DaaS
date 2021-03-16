@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using DaaS.Core.ErrorHandler;
+using DaaS.Core.Helpers;
 using DaaS.Core.ViewModels.Agents;
 using DaaS.DataLayer.DataModels;
 using DaaS.DataLayer.Repository.Base;
@@ -37,6 +38,7 @@ namespace DaaS.DataLayer.Repository.AgentRepo
                     MotorNumber = model.MotorNumber,
                     Latitude = model.Latitude,
                     Longitude = model.Longitude,
+                    Status = AgentStatus.Inactive,
                     Id = Guid.NewGuid().ToString("N")
                 };
 
