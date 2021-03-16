@@ -25,7 +25,7 @@ namespace DaaS.Logic.AgentService.Impl
         {
             try
             {
-                var phoneNumberUtil = PhoneNumbers.PhoneNumberUtil.GetInstance();
+                var phoneNumberUtil = PhoneNumberUtil.GetInstance();
                 PhoneNumber phoneNumber = null;
 
                 if (model.MobileNumber.StartsWith('+'))
@@ -50,13 +50,7 @@ namespace DaaS.Logic.AgentService.Impl
 
                 var resp = await _agentRepository.CreateAgentInDb(model);
 
-                if (ErrorHandler.AgentCreateError.Equals(resp))
-                {
-                    return AppResult.Error(resp);
-                }
-
-
-                return AppResult.Success("Successfully created agent", resp);
+                return ErrorHandler.AgentCreateError.Equals(resp) ? AppResult.Error(resp) : AppResult.Success("Successfully created agent", resp);
             }
             catch (Exception e)
             {
